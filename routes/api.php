@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\api\RiderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// reider
+Route::get('all/rider',[RiderController::class,'index']);
+
+// team
+Route::get('all/team', [TeamController::class, 'index']);

@@ -19,10 +19,10 @@ return new class extends Migration
             $table->integer('number');
             $table->string('nationality');
             $table->string('team_name');
-            $table->string('team_bike');
-            $table->integer('rider_standings');
-            $table->double('rider_points');
-            $table->foreignId('team_id');
+            // $table->string('team_bike');
+            // $table->integer('rider_standings');
+            // $table->double('rider_points');
+            // $table->foreignId('team_id');
             $table->timestamps();
         });
     }
