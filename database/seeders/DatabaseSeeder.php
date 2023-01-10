@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 use Database\Seeders\TeamSeeder;
 use Database\Seeders\RiderSeeder;
+use Database\Seeders\CircuitSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -26,7 +27,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             RiderSeeder::class,
-            TeamSeeder::class
+            TeamSeeder::class,
+            CircuitSeeder::class
         ]);
     }
 }

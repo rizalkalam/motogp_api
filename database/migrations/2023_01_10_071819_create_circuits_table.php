@@ -13,17 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('circuits', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('rider_id');
             $table->string('name');
-            $table->string('bike');
-            $table->string('rider_1');
-            $table->string('rider_2');
-            $table->string('img_bike');
-            // $table->string('team_status');
-            // $table->integer('team_standings');
-            // $table->double('team_points');
+            $table->string('location');
+            $table->string('tag');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -35,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('circuits');
     }
 };

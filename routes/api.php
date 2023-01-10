@@ -2,8 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TeamController;
+use App\Http\Controllers\api\TeamController;
 use App\Http\Controllers\api\RiderController;
+use App\Http\Controllers\api\CircuitController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,6 @@ Route::get('all/rider',[RiderController::class,'index']);
 
 // team
 Route::get('all/team', [TeamController::class, 'index']);
+
+// circuit
+Route::get('all/circuit', [CircuitController::class, 'index']);

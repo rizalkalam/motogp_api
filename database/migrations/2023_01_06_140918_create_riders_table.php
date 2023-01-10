@@ -15,10 +15,13 @@ return new class extends Migration
     {
         Schema::create('riders', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('team_id');
             $table->string('name');
             $table->integer('number');
             $table->string('nationality');
             $table->string('team_name');
+            $table->string('img_rider');
+            $table->string('icon_rider');
             // $table->string('team_bike');
             // $table->integer('rider_standings');
             // $table->double('rider_points');
