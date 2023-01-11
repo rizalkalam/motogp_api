@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->integer('number');
             $table->string('nationality');
-            $table->string('team_name');
+            // $table->string('team_name');
             $table->string('img_rider');
             $table->string('icon_rider');
             // $table->string('team_bike');

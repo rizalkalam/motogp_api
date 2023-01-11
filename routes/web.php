@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\admin\RegisterController;
 use App\Http\Controllers\admin\LoginController;
+use App\Http\Controllers\admin\RiderController;
+use App\Http\Controllers\admin\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function(){
     return view('index');
 })->middleware('auth');
+Route::resource('/dashboard/riders', RiderController::class)->middleware('auth');
 
 // login
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');

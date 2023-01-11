@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Team;
 use App\Models\Rider;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -12,8 +13,8 @@ class Rider extends Model
 
     protected $guarded = ['id'];
 
-    public function rider()
+    public function team()
     {
-        return $this->belongsTo(Rider::class);
+        return $this->belongsTo(Team::class);
     }
 }

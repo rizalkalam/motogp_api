@@ -20,7 +20,7 @@ class RiderSeeder extends Seeder
                 'name'=>'Maverick Vinales',
                 'number'=>12,
                 'nationality'=>'Spain',
-                'team_name'=>'Aprilia Racing',
+                // 'team_name'=>'Aprilia Racing',
                 'img_rider'=>'vinales.jpg',
                 'icon_rider'=>'MV12',
                 'team_id'=>1
@@ -29,7 +29,7 @@ class RiderSeeder extends Seeder
                 'name'=>'Fabio Quartaro',
                 'number'=>20,
                 'nationality'=>'French',
-                'team_name'=>'Monster Energy Yamaha Motogp',
+                // 'team_name'=>'Monster Energy Yamaha Motogp',
                 'img_rider'=>'quartararo.jpg',
                 'icon_rider'=>'FQ20',
                 'team_id'=>2
@@ -38,7 +38,7 @@ class RiderSeeder extends Seeder
                 'name'=>'Joan Mir',
                 'number'=>36,
                 'nationality'=>'Spain',
-                'team_name'=>'Repsol Honda Team',
+                // 'team_name'=>'Repsol Honda Team',
                 'img_rider'=>'mir.jpg',
                 'icon_rider'=>'JM36',
                 'team_id'=>3
