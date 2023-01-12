@@ -34,3 +34,6 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::post('/add', [RiderController::class,'store']);
+Route::get('/detail/{rider}', [RiderController::class, 'show']);
+Route::post('/update/{rider}', [RiderController::class, 'update']);
+Route::delete('/delete/{rider}', [RiderController::class, 'destroy']);

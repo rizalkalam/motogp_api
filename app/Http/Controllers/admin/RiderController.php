@@ -20,7 +20,7 @@ class RiderController extends Controller
 
     public function show(Rider $rider)
     {
-        return view('post.riders',[
+        return view('post.detail_rider',[
             'rider'=>$rider,
             'team'=>Team::all()
         ]);
@@ -42,6 +42,31 @@ class RiderController extends Controller
         // }
 
         Rider::create($validateData);
-        return redirect('/dashboard/riders')->with('success', 'Member has been added !');
+        return redirect('/dashboard/riders')->with('success', 'Rider has been added !');
+    }
+
+    public function update(Request $request, Rider $rider)
+    {
+        $validateData = $request->validate([
+            'team_id'=>'required',
+            'name'=>'required',
+            'number'=>'required',
+            'nationality'=>'required',
+            'img_rider'=>'required',
+            'icon_rider'=>'required',
+        ]);
+
+        //  if ($request->file('image')) {
+        //     $validateData['image'] = $request->file('image')->store('post-images');
+        // }
+
+        Rider::where('id',$rider->id)->update($validateData);
+        return redirect('/dashboard/riders')->with('success', 'Rider has been updated !');
+    }
+
+    public function destroy(Rider $rider)
+    {
+        Rider::destroy($rider->id);
+        return redirect('/dashboard/riders')->with('success', 'Rider has been deleted !');
     }
 }
