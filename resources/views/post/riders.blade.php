@@ -68,10 +68,10 @@
               <input type="number" class="form-control" required id="number" name="number" >
             </div>
             <div class="mb-3">
-              <label for="group" class="form-label">Team</label>
-              <select class="form-select" name="group_id" id="">
+              <label for="team_id" class="form-label">Team</label>
+              <select class="form-select" name="team_id" id="">
                 @foreach ($team as $item)
-                <option name="group_id" value="{{ $item->id }}">{{ $item->team_name }}</option>
+                <option name="team_id" value="{{ $item->id }}">{{ $item->name }}</option>
                 @endforeach
               </select>
             </div>
@@ -80,12 +80,12 @@
             <input type="text" class="form-control" required id="nationality" name="nationality">
           </div>
           <div class="mb-3">
-            <label for="image" class="form-label">image</label>
-            <input type="date" class="form-control" required id="image" name="image">
+            <label for="img_rider" class="form-label">image</label>
+            <input type="text" class="form-control" required id="img_rider" name="img_rider">
           </div>
           <div class="mb-3">
-            <label for="icon" class="form-label">icon</label>
-            <input type="file" class="form-control" required id="icon" name="icon">
+            <label for="icon_rider" class="form-label">icon</label>
+            <input type="text" class="form-control" required id="icon_rider" name="icon_rider">
           </div>
         </div>
       <div class="modal-footer">

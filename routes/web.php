@@ -32,3 +32,5 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 // register
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
+
+Route::post('/add', [RiderController::class,'store']);
