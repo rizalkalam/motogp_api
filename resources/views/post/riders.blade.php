@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">All K-pop Member</h1>
+    <h1 class="h2">Riders</h1>
 </div>
 
 <div class="table-responsive col-lg-10">
@@ -48,7 +48,7 @@
     </table>
   </div>
 
-  {{-- <!-- Modal add -->
+  <!-- Modal add -->
   <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="detailAddLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -64,28 +64,28 @@
               <input type="text" class="form-control" required id="name" name="name">
             </div>
             <div class="mb-3">
-              <label for="group" class="form-label">Group</label>
+              <label >Number</label>
+              <input type="number" class="form-control" required id="number" name="number" >
+            </div>
+            <div class="mb-3">
+              <label for="group" class="form-label">Team</label>
               <select class="form-select" name="group_id" id="">
                 @foreach ($team as $item)
                 <option name="group_id" value="{{ $item->id }}">{{ $item->team_name }}</option>
                 @endforeach
               </select>
             </div>
-            <div class="mb-3">
-              <label >Age</label>
-              <input type="number" class="form-control" required id="age" name="age" >
-          </div>
           <div class="mb-3">
-            <label for="birth_place" class="form-label">birth place</label>
-            <input type="text" class="form-control" required id="birth_place" name="birth_place">
-          </div>
-          <div class="mb-3">
-            <label for="birth_date" class="form-label">birth date</label>
-            <input type="date" class="form-control" required id="birth_date" name="birth_date">
+            <label for="nationality" class="form-label">nationality</label>
+            <input type="text" class="form-control" required id="nationality" name="nationality">
           </div>
           <div class="mb-3">
             <label for="image" class="form-label">image</label>
-            <input type="file" class="form-control" required id="image" name="image">
+            <input type="date" class="form-control" required id="image" name="image">
+          </div>
+          <div class="mb-3">
+            <label for="icon" class="form-label">icon</label>
+            <input type="file" class="form-control" required id="icon" name="icon">
           </div>
         </div>
       <div class="modal-footer">
@@ -117,24 +117,24 @@
           <input type="text" class="form-control" required id="name" name="name" readonly value="{{ $rider->name }}">
       </div>
       <div class="mb-3">
-        <label for="group" class="form-label">Group</label>
-        <input type="text" class="form-control" readonly value="{{ $rider->group->group_name }}">
+        <label >Number</label>
+        <input type="number" class="form-control" required id="number" name="number" readonly value="{{ $rider->number }}">
+      </div>
+      <div class="mb-3">
+        <label for="team" class="form-label">Team</label>
+        <input type="text" class="form-control" readonly value="{{ $rider->team->name }}">
     </div>
       <div class="mb-3">
-          <label >Age</label>
-          <input type="number" class="form-control" required id="age" name="age" readonly value="{{ $rider->age }}">
+          <label for="nationality" class="form-label">nationality</label>
+          <input type="text" class="form-control" required id="nationality" name="nationality" readonly value="{{ $rider->nationality }}">
       </div>
       <div class="mb-3">
-          <label for="birth_place" class="form-label">birth place</label>
-          <input type="text" class="form-control" required id="birth_place" name="birth_place" readonly value="{{ $member->birth_place }}">
+          <label for="img_rider" class="form-label">image</label>
+          <input type="text" class="form-control" required id="img_rider" name="img_rider" readonly value="{{ $rider->img_rider }}">
       </div>
       <div class="mb-3">
-          <label for="birth_date" class="form-label">birth date</label>
-          <input type="date" class="form-control" required id="birth_date" name="birth_date" readonly value="{{ $member->birth_date }}">
-      </div>
-      <div class="mb-3">
-        <label for="image" class="form-label">image</label>
-        <input type="text" class="form-control" required id="image" name="image" readonly value="{{ $member->image }}">
+        <label for="icon_rider" class="form-label">icon</label>
+        <input type="text" class="form-control" required id="icon_rider" name="icon_rider" readonly value="{{ $rider->icon_rider }}">
     </div>
   </div>
   <div class="modal-footer">
@@ -142,6 +142,6 @@
     </div>
   </div>
 </div>
-</div> --}}
+</div>
 
 @endsection

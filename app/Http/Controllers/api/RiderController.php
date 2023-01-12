@@ -10,7 +10,20 @@ class RiderController extends Controller
 {
     public function index()
     {
-        $data = Rider::all();
+        $data = array();
+        $riders = Rider::all();
+        foreach ($riders as $rider) {
+            $data[]=[
+                'id'=>$rider->id,
+                'team_id'=>$rider->team_id,
+                'name'=>$rider->name,
+                'number'=>$rider->number,
+                'team_name'=>$rider->team->name,
+                'nationality'=>$rider->nationality,
+                'img_rider'=>$rider->img_rider,
+                'icon_rider'=>$rider->icon_rider
+            ];
+        }
 
         return response()->json(['Riders'=>$data]);
     }
