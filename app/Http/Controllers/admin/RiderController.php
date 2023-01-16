@@ -11,7 +11,7 @@ class RiderController extends Controller
 {
     public function index(Rider $rider)
     {
-        return view('post.riders', [
+        return view('rider.all_rider', [
             'riders'=>Rider::all(),
             'data'=>$rider,
             'team'=>Team::all()
@@ -20,7 +20,7 @@ class RiderController extends Controller
 
     public function show(Rider $rider)
     {
-        return view('post.detail_rider',[
+        return view('rider.detail_rider',[
             'rider'=>$rider,
             'team'=>Team::all()
         ]);
@@ -28,20 +28,33 @@ class RiderController extends Controller
 
     public function store(Request $request)
     {
-        $validateData = $request->validate([
-            'team_id'=>'required',
-            'name'=>'required',
-            'number'=>'required',
-            'nationality'=>'required',
-            'img_rider'=>'required',
-            'icon_rider'=>'required',
-        ]);
+        $data = Rider::create($request->all());
+        if ($request->hasFile('img_flag')) {
+            $request->file('img_flag')->move('images/', $request->file('img_flag')->getClientOriginalName());
+            $data->img_flag = $request->file('img_flag')->getClientOriginalName();
+            $data->save();
+        }
+        if ($request->hasFile('img_rider')) {
+            $request->file('img_rider')->move('images/', $request->file('img_rider')->getClientOriginalName());
+            $data->img_rider = $request->file('img_rider')->getClientOriginalName();
+            $data->save();
+        }
+        
+        // $validateData = $request->validate([
+        //     'team_id'=>'required',
+        //     'name'=>'required',
+        //     'number'=>'required',
+        //     'nationality'=>'required',
+        //     'img_rider'=>'image|file|max:9024',
+        //     'icon_rider'=>'required',
+        // ]);
 
-        // if ($request->file('image')) {
-        //     $validateData['image'] = $request->file('image')->store('post-images');
+        // if ($request->file('img_rider')) {
+        //     $validateData['img_rider'] = $request->file('img_rider')->move(pubic_path('foto'));
         // }
+        
 
-        Rider::create($validateData);
+        // Rider::create($validateData);
         return redirect('/dashboard/riders')->with('success', 'Rider has been added !');
     }
 
@@ -51,14 +64,21 @@ class RiderController extends Controller
             'team_id'=>'required',
             'name'=>'required',
             'number'=>'required',
-            'nationality'=>'required',
-            'img_rider'=>'required',
+            // 'nationality'=>'required',
+            'img_flag'=>'image|file|max:9024',
+            'img_rider'=>'image|file|max:9024',
             'icon_rider'=>'required',
         ]);
 
-        //  if ($request->file('image')) {
-        //     $validateData['image'] = $request->file('image')->store('post-images');
-        // }
+        if ($request->file('img_flag')) {
+            $request->file('img_flag')->move('images/', $request->file('img_flag')->getClientOriginalName());
+            $validateData['img_flag'] =  $request->file('img_flag')->getClientOriginalName();
+        }
+
+        if ($request->file('img_rider')) {
+            $request->file('img_rider')->move('images/', $request->file('img_rider')->getClientOriginalName());
+            $validateData['img_rider'] =  $request->file('img_rider')->getClientOriginalName();
+        }
 
         Rider::where('id',$rider->id)->update($validateData);
         return redirect('/dashboard/riders')->with('success', 'Rider has been updated !');

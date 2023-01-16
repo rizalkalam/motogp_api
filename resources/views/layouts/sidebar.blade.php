@@ -12,13 +12,17 @@
             <span data-feather="file-text" class="align-text-bottom"></span>
             Riders
           </a>
-          <a class="nav-link {{ Request::is('dashboard/girl') ? 'active' : '' }}" href="/dashboard/girl">
+          <a class="nav-link {{ Request::is('dashboard/teams') ? 'active' : '' }}" href="/dashboard/teams">
             <span data-feather="file-text" class="align-text-bottom"></span>
             Teams
           </a>
-          <a class="nav-link {{ Request::is('dashboard/girl') ? 'active' : '' }}" href="/dashboard/girl">
+          <a class="nav-link {{ Request::is('dashboard/circuits') ? 'active' : '' }}" href="/dashboard/circuits">
             <span data-feather="file-text" class="align-text-bottom"></span>
             Cuircuits
+          </a>
+          <a class="nav-link {{ Request::is('dashboard/assets') ? 'active' : '' }}" href="/dashboard/assets">
+            <span data-feather="upload" class="align-text-bottom"></span>
+            Upload Assets
           </a>
         </li>
       </ul>

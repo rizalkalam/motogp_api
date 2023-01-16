@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('team_id');
             $table->string('name');
             $table->integer('number');
-            $table->string('nationality');
+            $table->string('img_flag');
             // $table->string('team_name');
             $table->string('img_rider');
             $table->string('icon_rider');

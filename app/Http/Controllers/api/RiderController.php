@@ -19,7 +19,7 @@ class RiderController extends Controller
                 'name'=>$rider->name,
                 'number'=>$rider->number,
                 'team_name'=>$rider->team->name,
-                'nationality'=>$rider->nationality,
+                'img_flag'=>$rider->img_flag,
                 'img_rider'=>$rider->img_rider,
                 'icon_rider'=>$rider->icon_rider
             ];

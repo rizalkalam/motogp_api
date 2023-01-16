@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('rider_id');
+            // $table->foreignId('rider_id');
             $table->string('name');
             $table->string('bike');
-            $table->string('rider_1');
-            $table->string('rider_2');
+            // $table->string('rider_1');
+            // $table->string('rider_2');
             $table->string('img_bike');
             // $table->string('team_status');
             // $table->integer('team_standings');

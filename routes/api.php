@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\TeamController;
+use App\Http\Controllers\api\AssetController;
 use App\Http\Controllers\api\RiderController;
 use App\Http\Controllers\api\CircuitController;
 
@@ -29,3 +30,6 @@ Route::get('all/team', [TeamController::class, 'index']);
 
 // circuit
 Route::get('all/circuit', [CircuitController::class, 'index']);
+
+// asset
+Route::get('all/asset', [AssetController::class, 'index']);
