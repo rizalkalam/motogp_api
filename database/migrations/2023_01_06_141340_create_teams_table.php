@@ -23,8 +23,8 @@ return new class extends Migration
             // $table->string('rider_1');
             // $table->string('rider_2');
             // $table->string('team_status');
-            // $table->integer('team_standings');
-            // $table->double('team_points');
+            $table->integer('team_standings');
+            $table->double('team_points');
             $table->timestamps();
         });
     }

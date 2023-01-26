@@ -20,7 +20,9 @@ class TeamSeeder extends Seeder
                 'name'=>'Aprilia Racing',
                 'bike'=>'Aprilia',
                 'img_bike'=>'aprilia.png',
-                'main_color'=>'#5CB43A'
+                'main_color'=>'#5CB43A',
+                'team_standings'=>1,
+                'team_points'=>200
                 // 'rider_1'=>'Maverick Vinales',
                 // 'rider_2'=>'Aleix Espargaro',
                 // 'rider_id'=>1
@@ -29,7 +31,9 @@ class TeamSeeder extends Seeder
                 'name'=>'Monster Energy Yamaha Motogp',
                 'bike'=>'Yamaha',
                 'img_bike'=>'yamaha.png',
-                'main_color'=>'#0A2D82'
+                'main_color'=>'#0A2D82',
+                'team_standings'=>2,
+                'team_points'=>190
                 // 'rider_1'=>'Fabio Quartararo',
                 // 'rider_2'=>'Franco Morbidelli',
                 // 'rider_id'=>2
@@ -38,7 +42,9 @@ class TeamSeeder extends Seeder
                 'name'=>'Repsol Honda Team',
                 'bike'=>'Honda',
                 'img_bike'=>'honda.png',
-                'main_color'=>'#EE8633'
+                'main_color'=>'#EE8633',
+                'team_standings'=>3,
+                'team_points'=>159
                 // 'rider_1'=>'Marc Marquez',
                 // 'rider_2'=>'Joan Mir',
                 // 'rider_id'=>3

@@ -27,6 +27,7 @@ Route::get('/rider',[RiderController::class,'index']);
 
 // team
 Route::get('/team', [TeamController::class, 'index']);
+Route::get('/team/{id?}', [TeamController::class, 'details']);
 
 // circuit
 Route::get('/circuit', [CircuitController::class, 'index']);
