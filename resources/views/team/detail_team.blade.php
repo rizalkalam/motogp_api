@@ -27,6 +27,10 @@
                     <label for="img_bike" class="form-label">image</label>
                     <input type="file" class="form-control" required id="img_bike" name="img_bike" value="{{ old('img_bike', $team->img_bike) }}">
                 </div>
+                <div class="mb-3">
+                    <label for="main_color" class="form-label">main color</label>
+                    <input type="text" class="form-control" required id="main_color" name="main_color" value="{{ old('main_color', $team->main_color) }}">
+                </div>
             <a type="button" href="/dashboard/teams" class="btn btn-danger">Cancel</a>
             <button type="submit" class="btn btn-primary">Update</button>
             </form>

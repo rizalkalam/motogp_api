@@ -23,13 +23,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // reider
-Route::get('all/rider',[RiderController::class,'index']);
+Route::get('/rider',[RiderController::class,'index']);
 
 // team
-Route::get('all/team', [TeamController::class, 'index']);
+Route::get('/team', [TeamController::class, 'index']);
 
 // circuit
-Route::get('all/circuit', [CircuitController::class, 'index']);
+Route::get('/circuit', [CircuitController::class, 'index']);
 
 // asset
-Route::get('all/asset', [AssetController::class, 'index']);
+Route::get('/asset', [AssetController::class, 'index']);

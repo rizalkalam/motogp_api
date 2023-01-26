@@ -19,25 +19,28 @@ class TeamSeeder extends Seeder
             [
                 'name'=>'Aprilia Racing',
                 'bike'=>'Aprilia',
+                'img_bike'=>'aprilia.png',
+                'main_color'=>'#5CB43A'
                 // 'rider_1'=>'Maverick Vinales',
                 // 'rider_2'=>'Aleix Espargaro',
-                'img_bike'=>'aprilia.png',
                 // 'rider_id'=>1
             ],
             [
                 'name'=>'Monster Energy Yamaha Motogp',
                 'bike'=>'Yamaha',
+                'img_bike'=>'yamaha.png',
+                'main_color'=>'#0A2D82'
                 // 'rider_1'=>'Fabio Quartararo',
                 // 'rider_2'=>'Franco Morbidelli',
-                'img_bike'=>'yamaha.png',
                 // 'rider_id'=>2
             ],
             [
                 'name'=>'Repsol Honda Team',
                 'bike'=>'Honda',
+                'img_bike'=>'honda.png',
+                'main_color'=>'#EE8633'
                 // 'rider_1'=>'Marc Marquez',
                 // 'rider_2'=>'Joan Mir',
-                'img_bike'=>'honda.png',
                 // 'rider_id'=>3
             ]
         ])->each(function($team){

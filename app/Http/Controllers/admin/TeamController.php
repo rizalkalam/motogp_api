@@ -44,7 +44,8 @@ class TeamController extends Controller
             // 'rider_id'=>'required',
             'name'=>'required',
             'bike'=>'required',
-            'img_bike'=>'required'
+            'img_bike'=>'required',
+            'main_color'=>'required'
         ]);
 
         if ($request->file('img_bike')) {

@@ -21,7 +21,8 @@ class RiderController extends Controller
                 'team_name'=>$rider->team->name,
                 'img_flag'=>$rider->img_flag,
                 'img_rider'=>$rider->img_rider,
-                'icon_rider'=>$rider->icon_rider
+                'icon_rider'=>$rider->icon_rider,
+                'main_color'=>$rider->team->main_color
             ];
         }
 

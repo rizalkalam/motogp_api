@@ -89,6 +89,10 @@
             <label for="img_bike" class="form-label">image</label>
             <input type="file" class="form-control" required id="img_bike" name="img_bike">
           </div>
+          <div class="mb-3">
+            <label for="main_color" class="form-label">main color</label>
+            <input type="text" class="form-control" required id="main_color" name="main_color">
+          </div>
         </div>
       <div class="modal-footer">
         <button type="button" class="btn w-auto btn-secondary" data-bs-dismiss="modal">Cancel</button>
