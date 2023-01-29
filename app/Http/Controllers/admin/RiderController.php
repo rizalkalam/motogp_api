@@ -26,6 +26,13 @@ class RiderController extends Controller
         ]);
     }
 
+    public function create( Rider $rider){
+        return view('rider.create_rider',[
+            'rider'=>$rider,
+            'team'=>Team::all()
+        ]);
+    }
+
     public function store(Request $request)
     {
         $data = Rider::create($request->all());

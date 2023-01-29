@@ -38,6 +38,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 // rider page
 Route::resource('/dashboard/riders', RiderController::class)->middleware('auth');
+Route::get('/rider/create', [RiderController::class,'create']);
 Route::post('/rider/add', [RiderController::class,'store']);
 Route::get('/detail/rider/{rider}', [RiderController::class, 'show']);
 Route::post('/update/rider/{rider}', [RiderController::class, 'update']);
