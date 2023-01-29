@@ -24,6 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // reider
 Route::get('/rider',[RiderController::class,'index']);
+Route::get('/rider/{id?}', [RiderController::class, 'details']);
 
 // team
 Route::get('/team', [TeamController::class, 'index']);

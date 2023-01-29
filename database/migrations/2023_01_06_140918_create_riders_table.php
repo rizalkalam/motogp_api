@@ -19,13 +19,14 @@ return new class extends Migration
             $table->string('name');
             $table->integer('number');
             $table->string('img_flag');
-            // $table->string('team_name');
             $table->string('img_rider');
             $table->string('icon_rider');
-            // $table->string('team_bike');
-            // $table->integer('rider_standings');
-            // $table->double('rider_points');
-            // $table->foreignId('team_id');
+            $table->date('date_of_brith');
+            $table->string('place_of_brith');
+            $table->double('height');
+            $table->double('weight');
+            $table->integer('gp_victories');
+            $table->integer('worldchampionships');
             $table->timestamps();
         });
     }
