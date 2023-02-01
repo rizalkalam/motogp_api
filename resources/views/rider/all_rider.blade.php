@@ -5,7 +5,7 @@
 </div>
 
 <div class="table-responsive col-lg-10">
-  <a class="btn btn-primary w-40 float-end ms-2" type="button" data-bs-toggle="modal" data-bs-target="#addModal">add</a>
+  <a class="btn btn-primary w-40 float-end ms-2" type="button" href="/rider/create">add</a>
     <table class="table table-striped table-sm align-middle">
       <thead>
         <tr>
@@ -52,7 +52,7 @@
     </table>
   </div>
 
-  <!-- Modal add -->
+  {{-- <!-- Modal add -->
   <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="detailAddLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -61,41 +61,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form method="POST" action="/rider/add" enctype="multipart/form-data">
-            @csrf
-            <div class="mb-3">
-              <label >Name</label>
-              <input type="text" class="form-control" required id="name" name="name">
-            </div>
-            <div class="mb-3">
-              <label >Number</label>
-              <input type="number" class="form-control" required id="number" name="number" >
-            </div>
-            <div class="mb-3">
-              <label for="team_id" class="form-label">Team</label>
-              <select class="form-select" name="team_id" id="">
-                @foreach ($team as $item)
-                <option name="team_id" value="{{ $item->id }}">{{ $item->name }}</option>
-                @endforeach
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="img_flag" class="form-label">nationality</label>
-              <input type="file" class="form-control" required id="img_flag)flag" name="img_flag">
-            </div>
-          <div class="mb-3">
-            <label for="img_rider" class="form-label">image</label>
-            <input type="file" class="form-control" required id="img_rider" name="img_rider">
-          </div>
-          <div class="mb-3">
-            <label for="icon_rider" class="form-label">icon</label>
-            <input type="text" class="form-control" required id="icon_rider" name="icon_rider">
-          </div>
-        </div>
-      <div class="modal-footer">
-        <button type="button" class="btn w-auto btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button type="submit" class="btn w-auto btn-primary">Add</button>
-      </form>
+          
     </div>
   </div>
 </div>
@@ -139,13 +105,14 @@
       <div class="mb-3">
         <label for="icon_rider" class="form-label">icon</label>
         <input type="text" class="form-control" required id="icon_rider" name="icon_rider">
-    </div>
+      </div>
+      
   </div>
   <div class="modal-footer">
   </form>
     </div>
   </div>
 </div>
-</div>
+</div> --}}
 
 @endsection

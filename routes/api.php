@@ -23,10 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // reider
-Route::group(["prefix"=>"/rider"],function(){
-    Route::get('/all',[RiderController::class,'index']);
-    Route::get('/detail/{id?}', [RiderController::class, 'details']);
-});
+Route::get('/rider',[RiderController::class,'index']);
 
 // team
 Route::group(["prefix"=>"/team"],function(){
