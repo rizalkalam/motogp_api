@@ -28,4 +28,22 @@ class RiderController extends Controller
 
         return response()->json(['Riders'=>$data]);
     }
+
+    public function details($id)
+    {
+        $rider = Rider::whereId($id)->first();
+        if ($team) {
+            return response()->json([
+                'success'=>true,
+                'message'=>'Detail Rider!',
+                'data'=>$team
+            ],200);
+        }else{
+            return response()->json([
+                'success'=>false,
+                'message'=>'Rider Tidak Ditemukan!',
+                'data'=>''
+            ],401);
+        }
+    }
 }
