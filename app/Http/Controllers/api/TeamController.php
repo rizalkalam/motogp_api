@@ -18,6 +18,7 @@ class TeamController extends Controller
                 'id'=>$team->id,
                 'name'=>$team->name,
                 'bike'=>$team->bike,
+                'rider'=>$team->rider->name,
                 'img_bike'=>$team->img_bike,
                 'main_color'=>$team->main_color
             ];

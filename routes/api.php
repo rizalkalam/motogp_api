@@ -23,12 +23,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // reider
-Route::get('/rider',[RiderController::class,'index']);
+Route::group(["prefix"=>"/rider"],function(){
+    Route::get('/all',[RiderController::class,'index']);
+    Route::get('/detail/{id?}', [RiderController::class, 'details']);
+});
 
 // team
 Route::group(["prefix"=>"/team"],function(){
     Route::get('/all', [TeamController::class, 'index']);
-    Route::get('/team/{id?}', [TeamController::class, 'details']);
+    Route::get('/detail/{id?}', [TeamController::class, 'details']);
 });
 
 // circuit
