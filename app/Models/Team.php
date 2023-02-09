@@ -15,6 +15,6 @@ class Team extends Model
 
     public function rider()
     {
-        return $this->HasMany(Rider::class);
+        return $this->hasMany(Rider::class);
     }
 }

@@ -10,21 +10,25 @@ class TeamController extends Controller
 {
     public function index()
     {
+        $data = Team::with('rider')->get();
+        return response()->json([
+            'data'=>$data
+        ]);
         // $data = Team::all();
-        $data = array();
-        $teams = Team::all();
-        foreach ($teams as $team) {
-            $data[]=[
-                'id'=>$team->id,
-                'name'=>$team->name,
-                'bike'=>$team->bike,
-                'rider'=>$team->rider->name,
-                'img_bike'=>$team->img_bike,
-                'main_color'=>$team->main_color
-            ];
-        }
+        // $data = array();
+        // $teams = Team::with('rider');
+        // foreach ($teams as $team) {
+        //     $data[]=[
+        //         'id'=>$team->id,
+        //         'name'=>$team->name,
+        //         'bike'=>$team->bike,
+        //         'rider'=>$team->rider->name,
+        //         'img_bike'=>$team->img_bike,
+        //         'main_color'=>$team->main_color
+        //     ];
+        // }
 
-        return response()->json(['Teams'=>$data]);
+        // return response()->json(['Teams'=>$data]);
     }
 
     public function details($id)
