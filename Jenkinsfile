@@ -12,7 +12,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Install Composer dan dependensinya
-                sh 'composer install'
+                sh 'composer install require-dev'
             }
         }
 
