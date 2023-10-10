@@ -12,7 +12,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Install Composer dan dependensinya
-                sh 'composer install require-dev'
+                sh 'composer install'
             }
         }
 
@@ -20,7 +20,6 @@ pipeline {
             steps {
                 // Lakukan proses build, migrasi, dll.
                 sh 'php artisan key:generate'
-                sh 'php artisan config:cache'
                 sh 'php artisan migrate:fresh --seed'
             }
         }
