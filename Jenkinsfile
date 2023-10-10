@@ -21,7 +21,7 @@ pipeline {
                 // Lakukan proses build, migrasi, dll.
                 sh 'php artisan key:generate'
                 sh 'php artisan config:cache'
-                sh 'php artisan migrate --force'
+                sh 'php artisan migrate:fresh --seed'
             }
         }
 
